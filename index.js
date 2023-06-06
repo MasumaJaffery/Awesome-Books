@@ -9,6 +9,12 @@ document.addEventListener('DOMContentLoaded', () => {
   const Books = [];
   // Function Add for Adding Books;
   function Add() {
+    const storedTitle = document.getElementById('title');
+    const storedAuthor = document.getElementById('author');
+    if(storedTitle && storedAuthor) {
+      document.getElementById('title').value = storedTitle;
+      document.getElementById('author').value = storedAuthor;
+    }
     const AddButton = document.getElementById('add-btn');
     // i used as key value, As we know setItem takes two parameters Key and Value
     let i = 1;
@@ -22,14 +28,17 @@ document.addEventListener('DOMContentLoaded', () => {
       // LocalStorage Setup!
       if (localStorage.length === 0) {
         localStorage.setItem(i, JSON.stringify(book));
+        localStorage.getItem(JSON.parse())
         // Object book Pushed(Added) in Books Array.
         Books.push(book);
+        console.log(Books);
         // display line shows last added book in Array Books!
         display(Books.length - 1);
       } else {
         localStorage.setItem(i++, JSON.stringify(book));
         // Object book Pushed(Added) in Books Array.
         Books.push(book);
+        console.log(Books);
         // display line shows last added book in Array Books!
         display(Books.length - 1);
       }
@@ -62,7 +71,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const removeButton = table.querySelector('.remove-btn');
     removeButton.addEventListener('click', (event) => {
       // event.target triggers event to dataset of index in order to find out index of book for delete.
-      const { index } = event.target.dataset;
+      const index = parseInt(event.target.dataset.index, 10);
       // Here removeBook(index) used as CallBack Function!
       removeBook(index);
       // table.remove() removes row of table in which book was existed.
