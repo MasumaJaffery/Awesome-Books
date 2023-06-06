@@ -117,25 +117,23 @@ In order to run this project you need the following tools:
 
 Clone this repository to your desired folder:
 
-<!--
 Example commands:
+
 
 ```sh
   cd my-folder
   git clone git@github.com:MasumaJaffery/Awesome-Books.git
 ```
---->
+
 
 ### Install
 
 - Install project's packages with:
-<!--
+
 ```sh
    cd Awesome-Books
-
   npm install or npm i
 ```
---->
 
 
 ### Usage
