@@ -50,7 +50,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Function to load and display the stored books
 function loadBook () {
+  //We used For Loop to fetch Data from Array Books
   for(let i = 0; i < localStorage.length; i++){
+    //here we use getItem method to get index of book from LS.
     const storedBook = localStorage.getItem(i);
     if(storedBook) {
     const booklet = JSON.parse(storedBook);
