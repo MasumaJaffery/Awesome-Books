@@ -129,13 +129,13 @@ Example commands:
 ### Install
 
 - Install project's packages with:
-
+<!--
 ```sh
    cd Awesome-Books
 
   npm install or npm i
 ```
-
+--->
 
 
 ### Usage
