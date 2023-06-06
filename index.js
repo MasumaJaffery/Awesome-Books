@@ -9,8 +9,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const Books = [];
   // Function Add for Adding Books;
   function Add() {
-    const storedTitle = document.getElementById('title');
-    const storedAuthor = document.getElementById('author');
+    const storedTitle = localStorage.getItem('title');
+    const storedAuthor = localStorage.getItem('author');
     if(storedTitle && storedAuthor) {
       document.getElementById('title').value = storedTitle;
       document.getElementById('author').value = storedAuthor;
@@ -28,7 +28,6 @@ document.addEventListener('DOMContentLoaded', () => {
       // LocalStorage Setup!
       if (localStorage.length === 0) {
         localStorage.setItem(i, JSON.stringify(book));
-        localStorage.getItem(JSON.parse())
         // Object book Pushed(Added) in Books Array.
         Books.push(book);
         console.log(Books);
@@ -42,10 +41,25 @@ document.addEventListener('DOMContentLoaded', () => {
         // display line shows last added book in Array Books!
         display(Books.length - 1);
       }
+      localStorage.setItem('title',Title);
+      localStorage.setItem('author',Author);
     });
   }
 
   Add();
+
+// Function to load and display the stored books
+function loadBook () {
+  for(let i = 0; i < localStorage.length; i++){
+    const storedBook = localStorage.getItem(i);
+    if(storedBook) {
+    const booklet = JSON.parse(storedBook);
+    Books.push(booklet);
+    display(Books.length - 1);
+  }
+ }
+}
+loadBook();
 
   function display(objectIndex) {
     const Book_list = document.getElementById('booklist');
@@ -68,22 +82,25 @@ document.addEventListener('DOMContentLoaded', () => {
     // Now we can append the Table to Book_list!
     Book_list.appendChild(table);
     // intialize removeButton instead display func because removebutton is made dynamic inside display func.
+    
     const removeButton = table.querySelector('.remove-btn');
     removeButton.addEventListener('click', (event) => {
       // event.target triggers event to dataset of index in order to find out index of book for delete.
       const index = parseInt(event.target.dataset.index, 10);
       // Here removeBook(index) used as CallBack Function!
-      removeBook(index);
+      remove(index);
       // table.remove() removes row of table in which book was existed.
       table.remove();
     });
+
   }
-  function removeBook(index) {
+  function remove(index) {
     // localStorage.removeItem() removes item from LocalStorage.
     localStorage.removeItem(index);
     // Splice cut off the space that the deleted element(index of array) takes!
     // Splice takes two arguements(index => index of array) and 1 => one element at a Time.
     Books.splice(index, 1);
   }
+  remove();
 });
 /* Tadaa! */
