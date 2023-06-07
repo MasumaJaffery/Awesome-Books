@@ -82,28 +82,3 @@ class BookList {
 document.addEventListener('DOMContentLoaded', () => {
   const bookList = new BookList();
 });
-
-class Abc {
-    constructor() {
-      this.a = { a: "10" };
-      this.b = this.a;
-    }
-  
-    sum() {
-      this.a.a = "20";
-    }
-  
-    loader() {
-      this.b.a = "30";
-    }
-  
-    print() {
-      console.log(this.a.a);
-    }
-  }
-  
-  let test = new Abc();
-  
-  test.sum();
-  test.loader();
-  test.print();
