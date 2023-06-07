@@ -18,32 +18,22 @@ class BookList {
     addBtn.addEventListener('click', () => {
       const storedTitle = localStorage.getItem('title');
       const storedAuthor = localStorage.getItem('author');
-  
+
       if (storedTitle && storedAuthor) {
         document.getElementById('title').value = storedTitle;
         document.getElementById('author').value = storedAuthor;
       }
-  
+
       const titleInput = document.getElementById('title').value;
       const authorInput = document.getElementById('author').value;
-      const i = 0;
+
       const book = new Book(titleInput, authorInput);
       this.books.push(book);
-       
-      if (localStorage.length === 0) {
-        localStorage.setItem(i, JSON.stringify(book));
-        // Object book Pushed(Added) in Books Array.
-        this.books.push(book);
-        // display line shows last added book in Array Books!
-        this.displayBook(this.books.length - 1);
-      } else {
-        localStorage.setItem(i+1, JSON.stringify(book));
-        // Object book Pushed(Added) in Books Array.
-        this.books.push(book);
-        // display line shows last added book in Array Books!
-        this.displayBook(this.books.length - 1);
-      }
-  
+
+      localStorage.setItem('title', '');
+      localStorage.setItem('author', '');
+      localStorage.setItem('books', JSON.stringify(this.books));
+
       this.displayBook(book);
     });
   }
@@ -63,12 +53,16 @@ class BookList {
     const table = document.createElement('table');
     table.innerHTML = `
       <tr>
-        <td>"${book.title}" by ${book.author}</td>
-        <td><button type="button" class="remove-btn">Remove</button></td>
+      <td>
+        "${book.title}" by 
+        ${book.author}
+        </td>
+        <td>
+        <button type="button" class="remove-btn">Remove</button></td>
       </tr>
     `;
     bookList.appendChild(table);
-  
+
     const removeButton = table.querySelector('.remove-btn');
     removeButton.addEventListener('click', () => {
       this.removeBook(book);
