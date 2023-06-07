@@ -28,14 +28,25 @@ class BookList {
       const authorInput = document.getElementById('author').value;
   
       const book = new Book(titleInput, authorInput);
+      const i = 1;
       this.books.push(book);
-  
-      localStorage.setItem('title', titleInput);
-      localStorage.setItem('author', authorInput);
-      localStorage.setItem('books', JSON.stringify(this.books));
-  
-      this.displayBook(book);
+      if (localStorage.length === 0) {
+        localStorage.setItem(i, JSON.stringify(book));
+        // Object book Pushed(Added) in Books Array.
+        this.books.push(book);
+        // display line shows last added book in Array Books!
+        display(this.books.length - 1);
+      } else {
+        localStorage.setItem(i+1, JSON.stringify(book));
+        // Object book Pushed(Added) in Books Array.
+        this.books.push(book);
+        // display line shows last added book in Array Books!
+        display(this.books.length - 1);
+      }
+      localStorage.setItem('title',Title);
+      localStorage.setItem('author',Author);
     });
+   
   }
 
   loadBooks() {
