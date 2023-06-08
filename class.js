@@ -1,29 +1,4 @@
 /* eslint-disable */
-const Booklink = document.getElementById('book-link');
-const Addlink = document.getElementById('add-link');
-const Contactlink = document.getElementById('contact-link')
-const Booklist = document.getElementById('booklist');
-const AddBook = document.getElementById('Add-Books');
-const Contact = document.getElementById('contact');
-Booklink.addEventListener('click', () => {
-    Booklist.style.display = 'block';
-    AddBook.style.display = 'none';
-    Contact.style.display = 'none';
-});
-
-Addlink.addEventListener('click', () => {
-  Booklist.style.display = 'none';
-  AddBook.style.display = 'block';
-  Contact.style.display = 'none';
-});
-
-Contactlink.addEventListener('click', () => {
-  Booklist.style.display = 'none';
-  AddBook.style.display = 'none';
-  Contact.style.display = 'block';
-});
-
-
 class Book {
   constructor(title, author) {
     this.title = title;
@@ -106,4 +81,28 @@ class BookList {
 
 document.addEventListener('DOMContentLoaded', () => {
   const bookList = new BookList();
+});
+
+const Booklink = document.getElementById('book-link');
+const Addlink = document.getElementById('add-link');
+const Contactlink = document.getElementById('contact-link')
+const Booklist = document.getElementById('booklist');
+const AddBook = document.getElementById('Add-Books');
+const Contact = document.getElementById('contact');
+Booklink.addEventListener('click', () => {
+    Booklist.style.display = 'block';
+    AddBook.style.display = 'none';
+    Contact.style.display = 'none';
+});
+
+Addlink.addEventListener('click', () => {
+  Booklist.style.display = 'none';
+  AddBook.style.display = 'block';
+  Contact.style.display = 'none';
+});
+
+Contactlink.addEventListener('click', () => {
+  Booklist.style.display = 'none';
+  AddBook.style.display = 'none';
+  Contact.style.display = 'block';
 });
