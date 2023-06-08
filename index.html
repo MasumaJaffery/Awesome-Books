@@ -8,21 +8,23 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato&family=Lexend:wght@400;500&family=Manrope&family=Noto+Color+Emoji&display=swap" rel="stylesheet">
     <link rel = "stylesheet" href="style.css">
-    <script src = "class.js"></script>
+    <script src = "class.js" defer></script>
     <title>Awesome Books</title>
 </head>
 <body>
 <header>
     <nav>
-      <h3>Awesome Books</h3>
+      <h3><a href = "index.html">Awesome Books</a></h3>
             <ul>
-                <li id="book-link"><a href="# ">List</a></li>
-                <li id="add-link"><a href="# ">Add Book</a></li>
-                <li id="contact"><a href="# ">Contact</a></li>               
+                <li><a id="book-link" href="#">List</a></li>
+                <li><a id="add-link" href="#">Add Book</a></li>
+                <li><a id="contact-link" href="#">Contact</a></li>          
             </ul>
     </nav>
+    <div id = "date"></div>
+    <img src = "Images/Books.gif">
 </header>
-<main>
+<main id = "hidden">
 <section id = "booklist"></section>
 <section id = "Add-Books">
 <div class = "form-center">

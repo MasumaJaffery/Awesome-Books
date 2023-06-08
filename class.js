@@ -89,8 +89,10 @@ const Contactlink = document.getElementById('contact-link')
 const Booklist = document.getElementById('booklist');
 const AddBook = document.getElementById('Add-Books');
 const Contact = document.getElementById('contact');
+const main = document.getElementById('hidden');
+
 Booklink.addEventListener('click', () => {
-    Booklist.style.display = 'block';
+    Booklist.style.display = 'flex';
     AddBook.style.display = 'none';
     Contact.style.display = 'none';
 });
@@ -104,5 +106,20 @@ Addlink.addEventListener('click', () => {
 Contactlink.addEventListener('click', () => {
   Booklist.style.display = 'none';
   AddBook.style.display = 'none';
-  Contact.style.display = 'block';
+  Contact.style.display = 'flex';
 });
+
+window.onload = function() {
+  CurrentDate();
+};
+
+function CurrentDate() {
+  const dateElement = document.getElementById('date');
+  const currentDate = new Date();
+
+  // Get the current date and time
+  const formattedDate = currentDate.toLocaleString();
+
+  // Set the formatted date as the content of the element
+  dateElement.textContent = formattedDate;
+}
