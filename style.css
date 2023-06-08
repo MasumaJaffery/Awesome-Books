@@ -2,6 +2,11 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Manrope', sans-serif;
+}
+
+main {
+  height: 84vh;
 }
 
 .form-center {
@@ -15,11 +20,21 @@ form {
   flex-direction: column;
   gap: 1rem;
   margin: 0 auto;
-  align-items: flex-end;
 }
 
 form #add-btn {
   align-items: flex-end;
+  color: #fff;
+  background-color: rgb(0, 0, 107);
+  border: 1px solid #fff;
+  padding: 2%;
+}
+
+form #add-btn:hover,
+form #add-btn:active {
+  background-color: #fff;
+  color: rgb(0, 0, 107);
+  border: 1px solid rgb(0, 0, 107);
 }
 
 table {
@@ -41,4 +56,53 @@ table td {
   align-items: center;
   padding: 0.1rem;
   display: flex;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  background-color: rgb(0, 0, 107);
+  height: 7vh;
+  justify-content: space-between;
+}
+
+nav h3 {
+  color: #fff;
+  margin-left: 5%;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 10%;
+  width: 25%;
+}
+
+nav ul a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  width: max-content;
+  margin-left: 1rem;
+  display: block;
+}
+
+#contact {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+}
+
+#contact p {
+  width: 40%;
+}
+
+footer {
+  background-color: rgb(0, 0, 107);
+  font-size: 12px;
+  color: #fff;
+  display: flex;
+  padding: 0.4%;
+  justify-content: space-around;
 }
