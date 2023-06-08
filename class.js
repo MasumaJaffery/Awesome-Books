@@ -50,8 +50,9 @@ class BookList {
 
   displayBook(book) {
     const bookList = document.getElementById('booklist');
-    const table = document.createElement('table');
-    table.innerHTML = `
+    var table = document.createElement("table");
+    table.classList.add("table", "table-striped", );
+       table.innerHTML = `
       <tr>
       <td>
         "${book.title}" by 
@@ -82,3 +83,46 @@ class BookList {
 document.addEventListener('DOMContentLoaded', () => {
   const bookList = new BookList();
 });
+
+const Booklink = document.getElementById('book-link');
+const Addlink = document.getElementById('add-link');
+const Contactlink = document.getElementById('contact-link')
+const Booklist = document.getElementById('booklist');
+const AddBook = document.getElementById('Add-Books');
+const Contact = document.getElementById('contact');
+const main = document.getElementById('hidden');
+
+Booklink.addEventListener('click', () => {
+    Booklist.style.display = 'block';
+    AddBook.style.display = 'none';
+    Contact.style.display = 'none';
+});
+
+Addlink.addEventListener('click', () => {
+  Booklist.style.display = 'none';
+  AddBook.style.display = 'block';
+  Contact.style.display = 'none';
+});
+
+Contactlink.addEventListener('click', () => {
+  Booklist.style.display = 'none';
+  AddBook.style.display = 'none';
+  Contact.style.display = 'flex';
+});
+
+function CurrentDate() {
+  const dateElement = document.getElementById('date');
+  const currentDate = new Date();
+
+  // Get the current date and time
+  const formattedDate = currentDate.toLocaleString();
+
+  // Set the formatted date as the content of the element
+  dateElement.textContent = formattedDate;
+}
+
+window.onload = function() {
+  CurrentDate();
+};
+
+

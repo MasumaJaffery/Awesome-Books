@@ -2,12 +2,25 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Manrope', sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+main {
+  height: 84vh;
 }
 
 .form-center {
   display: flex;
   align-items: center;
   margin-top: 2rem;
+}
+
+h2 {
+  font-size: 26px;
 }
 
 form {
@@ -20,20 +33,33 @@ form {
 
 form #add-btn {
   align-items: flex-end;
+  color: #000;
+  border: 1px solid #000;
+  padding: 2%;
 }
 
-table {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  border: 1px solid #000;
-  width: 50%;
-  margin: 0 auto;
+#booklist {
+  margin-top: 5rem;
+}
+
+table.table.table-striped {
+  margin-bottom: 0;
 }
 
 table tr {
   display: flex;
   justify-content: space-between;
+  width: 50%;
+  margin: 0 auto;
+  border: 1px solid #aaa8a8;
+}
+
+tr:nth-child(odd) {
+  background-color: #f0ebeb;
+}
+
+tr:nth-child(even) {
+  background-color: #fff;
 }
 
 table td {
@@ -41,4 +67,84 @@ table td {
   align-items: center;
   padding: 0.1rem;
   display: flex;
+}
+
+button {
+  background-color: #fff;
+}
+
+nav {
+  align-items: center;
+  background-color: #fff;
+  height: 7vh;
+  justify-content: space-between;
+  border: 2px solid #000;
+  display: flex;
+}
+
+nav a {
+  color: #000;
+  text-decoration: none;
+  margin-left: 5%;
+  font-size: 15px;
+}
+
+nav h3 {
+  margin-left: 5%;
+  width: 100%;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  padding-top: 2%;
+  margin-right: 5%;
+}
+
+nav ul a {
+  color: #000;
+  text-decoration: none;
+  font-weight: 500;
+  width: max-content;
+  margin-left: 1rem;
+  display: block;
+  padding: 0 16px;
+}
+
+.line {
+  border-left: 1px solid #000;
+}
+
+#date {
+  position: absolute;
+  right: 0;
+  margin-right: 1%;
+}
+
+img {
+  width: 20vw;
+  height: 30%;
+  position: absolute;
+}
+
+#contact {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1.8rem;
+}
+
+#contact p {
+  width: 50%;
+}
+
+footer {
+  background-color: #fff;
+  font-size: 12px;
+  color: #000;
+  display: flex;
+  padding: 0.4%;
+  justify-content: space-around;
+  border: 2px solid #000;
 }
