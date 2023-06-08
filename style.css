@@ -5,6 +5,10 @@
   font-family: 'Manrope', sans-serif;
 }
 
+a {
+  text-decoration: none;
+}
+
 main {
   height: 84vh;
 }
@@ -15,44 +19,47 @@ main {
   margin-top: 2rem;
 }
 
+h2 {
+  font-size: 26px;
+}
+
 form {
   display: flex;
   flex-direction: column;
   gap: 1rem;
   margin: 0 auto;
+  align-items: flex-end;
 }
 
 form #add-btn {
   align-items: flex-end;
-  color: #fff;
-  background-color: rgb(0, 0, 107);
-  border: 1px solid #fff;
+  color: #000;
+  border: 1px solid #000;
   padding: 2%;
-}
-
-form #add-btn:hover,
-form #add-btn:active {
-  background-color: #fff;
-  color: rgb(0, 0, 107);
-  border: 1px solid rgb(0, 0, 107);
 }
 
 #booklist {
   margin-top: 5rem;
 }
 
-table {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  border: 1px solid #000;
-  width: 50%;
-  margin: 0 auto;
+table.table.table-striped {
+  margin-bottom: 0;
 }
 
 table tr {
   display: flex;
   justify-content: space-between;
+  width: 50%;
+  margin: 0 auto;
+  border: 1px solid #aaa8a8;
+}
+
+tr:nth-child(odd) {
+  background-color: #f0ebeb;
+}
+
+tr:nth-child(even) {
+  background-color: #fff;
 }
 
 table td {
@@ -62,18 +69,24 @@ table td {
   display: flex;
 }
 
+button {
+  background-color: #fff;
+}
+
 nav {
-  display: flex;
   align-items: center;
-  background-color: rgb(0, 0, 107);
+  background-color: #fff;
   height: 7vh;
   justify-content: space-between;
+  border: 2px solid #000;
+  display: flex;
 }
 
 nav a {
-  color: #fff;
+  color: #000;
   text-decoration: none;
   margin-left: 5%;
+  font-size: 15px;
 }
 
 nav h3 {
@@ -84,16 +97,22 @@ nav h3 {
 nav ul {
   display: flex;
   list-style: none;
+  padding-top: 2%;
   margin-right: 5%;
 }
 
 nav ul a {
-  color: #fff;
+  color: #000;
   text-decoration: none;
   font-weight: 500;
   width: max-content;
   margin-left: 1rem;
   display: block;
+  padding: 0 16px;
+}
+
+.line {
+  border-left: 1px solid #000;
 }
 
 #date {
@@ -113,7 +132,7 @@ img {
   justify-content: space-around;
   flex-direction: column;
   align-items: center;
-  margin-top: 5rem;
+  margin-top: 1.8rem;
 }
 
 #contact p {
@@ -121,10 +140,11 @@ img {
 }
 
 footer {
-  background-color: rgb(0, 0, 107);
+  background-color: #fff;
   font-size: 12px;
-  color: #fff;
+  color: #000;
   display: flex;
   padding: 0.4%;
   justify-content: space-around;
+  border: 2px solid #000;
 }

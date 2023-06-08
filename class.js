@@ -50,8 +50,9 @@ class BookList {
 
   displayBook(book) {
     const bookList = document.getElementById('booklist');
-    const table = document.createElement('table');
-    table.innerHTML = `
+    var table = document.createElement("table");
+    table.classList.add("table", "table-striped", );
+       table.innerHTML = `
       <tr>
       <td>
         "${book.title}" by 
