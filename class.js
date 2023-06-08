@@ -92,7 +92,7 @@ const Contact = document.getElementById('contact');
 const main = document.getElementById('hidden');
 
 Booklink.addEventListener('click', () => {
-    Booklist.style.display = 'flex';
+    Booklist.style.display = 'block';
     AddBook.style.display = 'none';
     Contact.style.display = 'none';
 });
