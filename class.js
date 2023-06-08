@@ -109,10 +109,6 @@ Contactlink.addEventListener('click', () => {
   Contact.style.display = 'flex';
 });
 
-window.onload = function() {
-  CurrentDate();
-};
-
 function CurrentDate() {
   const dateElement = document.getElementById('date');
   const currentDate = new Date();
@@ -123,3 +119,9 @@ function CurrentDate() {
   // Set the formatted date as the content of the element
   dateElement.textContent = formattedDate;
 }
+
+window.onload = function() {
+  CurrentDate();
+};
+
+
