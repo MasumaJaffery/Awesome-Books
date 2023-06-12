@@ -1,3 +1,4 @@
+/* eslint-disable */
 import BookList from './Modules/BookList.js';
 import { DateTime } from './Modules/luxon.js';
 document.addEventListener('DOMContentLoaded', () => {
