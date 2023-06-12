@@ -1,4 +1,3 @@
-/* eslint-disable */
 import Book from './BookClass.js';
 class BookList {
     constructor() {
