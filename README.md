@@ -88,20 +88,11 @@ HTML+CSS+JS+GITHUB
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- LIVE DEMO -->
-
-## 🚀 Live Demo <a name="live-demo"></a>
-
-
-- [Live Demo Link]()
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- GETTING STARTED -->
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
-> Describe how a new developer could make use of your project.
 
 To get a local copy up and running, follow these steps.
 
@@ -170,13 +161,6 @@ You can deploy this project using: GitHub Pages,
 - GitHub: [@MasumaJaffery](https://github.com/MasumaJaffery)
 - Twitter: [@MasumaJaffery](https://twitter.com/MasumaJaffery)
 - LinkedIn: [Masuma Jaffery](https://www.linkedin.com/in/masuma-jaffery-797a29256/)
-
-
-👤 **Ruri Enciso**
-
-- GitHub: [@githubRuriEnciso](https://github.com/RuriEnciso)
-- Twitter: [@twitterRuriEnciso](https://twitter.com/rurienciso)
-- LinkedIn: [LinkedInRuriEnciso](https://www.linkedin.com/in/ruri-enciso/)
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
