@@ -10,7 +10,6 @@ REQUIRED SECTIONS:
 - Table of Contents
 - About the Project
   - Built With
-  - Live Demo
 - Getting Started
 - Authors
 - Future Features
@@ -89,12 +88,6 @@ HTML+CSS+JS+GITHUB
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
-<!-- GETTING STARTED -->
-
-## 💻 Getting Started <a name="getting-started"></a>
-
-
-To get a local copy up and running, follow these steps.
 
 ### Prerequisites
 
@@ -154,7 +147,6 @@ You can deploy this project using: GitHub Pages,
 
 ## 👥 Authors <a name="authors"></a>
 
-> Mention all of the collaborators of this project.
 
 👤 **Syeda Masuma Fatima**
 
