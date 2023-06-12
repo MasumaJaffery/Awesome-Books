@@ -4,7 +4,6 @@ import { DateTime } from './Modules/luxon.js';
 document.addEventListener('DOMContentLoaded', () => {
     const bookList = new BookList();
   });
-  
   const Booklink = document.getElementById('book-link');
   const Addlink = document.getElementById('add-link');
   const Contactlink = document.getElementById('contact-link')
