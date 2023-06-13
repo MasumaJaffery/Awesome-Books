@@ -87,9 +87,7 @@ HTML+CSS+JS+GITHUB
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- GETTING STARTED -->
 
-## 💻 Getting Started <a name="getting-started"></a>
 
 ### Prerequisites
 
@@ -155,7 +153,6 @@ You can deploy this project using: GitHub Pages,
 - GitHub: [@MasumaJaffery](https://github.com/MasumaJaffery)
 - Twitter: [@MasumaJaffery](https://twitter.com/MasumaJaffery)
 - LinkedIn: [Masuma Jaffery](https://www.linkedin.com/in/masuma-jaffery-797a29256/)
-
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
